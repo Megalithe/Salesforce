@@ -1,0 +1,17 @@
+## Salesforce Dev Console Post 
+## Open Execute Anonymous Window
+
+Http http = new Http();
+ 
+HttpRequest req = new HttpRequest();
+ 
+req.setEndpoint('https://website.com');
+ 
+req.setMethod('POST');
+ 
+ 
+HttpResponse response = http.send(req);
+ 
+System.debug('BODY: ' + response.getBody());
+ 
+System.debug('STATUS: ' + response.getStatusCode());
